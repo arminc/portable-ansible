@@ -78,3 +78,15 @@ $
 - [ansible/ansible](https://github.com/ansible/ansible) Ansible is a radically simple IT automation platform that makes your applications and systems easier to deploy. Avoid writing scripts or custom code to deploy and update your applications— automate in a language that approaches plain English, using SSH, with no agents to install on remote systems. http://ansible.com/
 - [ansible/ansible-modules-core](https://github.com/ansible/ansible-modules-core) Ansible modules - these modules ship with ansible
 - [ansible/ansible-modules-extras](https://github.com/ansible/ansible-modules-extras) Ansible extra modules - these modules ship with ansible
+
+## Building with Docker
+
+Build docker container
+```sh
+docker build -t ansibleubuntu .
+```
+
+Build the tarball
+```sh
+docker run --rm -v ${HOME}:${HOME}:rw -w ${PWD} ansibleubuntu make tarball
+```
